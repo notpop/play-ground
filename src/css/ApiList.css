@@ -1,0 +1,62 @@
+/* src/css/ApiList.css */
+.api-list {
+    margin-bottom: 20px;
+}
+
+.api-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.api-list h3 {
+    color: #8d735f;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.api-list h3.expanded::after {
+    content: "▲";
+}
+
+.api-list h3::after {
+    content: "▼";
+}
+
+.api-list li {
+    margin: 10px 0;
+}
+
+.api-button {
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+    min-height: 43px;
+}
+
+.api-button.get {
+    background-color: #00a972;
+}
+
+.api-button.post {
+    background-color: #d8d000;
+}
+
+.api-button.put {
+    background-color: #0095a3;
+}
+
+.api-button.delete {
+    background-color: #e53c00;
+}
+
+.api-button:hover {
+    opacity: 0.8;
+}

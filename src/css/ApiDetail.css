@@ -1,0 +1,154 @@
+/* src/css/ApiDetail.css */
+.api-detail {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.api-detail .api-method.get {
+    color: #00a972;
+}
+
+.api-detail .api-method.post {
+    color: #d8d000;
+}
+
+.api-detail .api-method.put {
+    color: #0095a3;
+}
+
+.api-detail .api-method.delete {
+    color: #e53c00;
+}
+
+.api-detail .api-method {
+    margin-bottom: 35px;
+}
+
+.api-detail .form-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.api-detail .form-group-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.api-detail .label-inline {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.api-detail label {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    width: 115px;
+    min-width: 115px;
+}
+
+.api-detail input,
+.api-detail select {
+    padding: 10px;
+    width: calc(100% - 160px);
+    box-sizing: border-box;
+    margin-left: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.api-detail input.endpoint {
+    font-size: large;
+    font-weight: bold;
+    border: none;
+    color: #8d735f;
+    pointer-events: none;
+}
+
+.api-detail input.endpoint:hover {
+    border: none;
+    outline: none;
+}
+
+.api-detail input.endpoint:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.api-detail input:focus,
+.api-detail select:focus {
+    border: 1px solid #0095a3;
+    box-shadow: 0 0 5px rgba(0, 149, 163, 0.5);
+    outline: none;
+}
+
+.api-detail .params {
+    margin-top: 40px;
+}
+
+.request-button {
+    background-color: #0095a3;
+    color: #ffffff;
+    border: 1px solid transparent;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.request-button:hover {
+    opacity: 0.8;
+}
+
+.request-button:focus {
+    border: 1px solid #0095a3;
+    box-shadow: 0 0 5px rgba(0, 149, 163, 0.5);
+    outline: none;
+}
+
+.param {
+    margin: 20px 0;
+}
+
+.param .label-inline {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.param .required {
+    color: #de07a5;
+    margin-left: 5px;
+}
+
+.response {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f6f8fa;
+    border-radius: 5px;
+    border: 1px solid #d1d5da;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.response h3 {
+    margin-top: 0;
+}
+
+.response pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: monospace;
+}

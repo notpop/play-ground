@@ -1,0 +1,35 @@
+/* src/css/JsonViewer.css */
+.json-viewer {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.json-content {
+    background-color: #f6f8fa;
+    border-radius: 5px;
+    border: 1px solid #d1d5da;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+pre {
+    margin: 0;
+}
+
+code {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.json-string {
+    color: #6a8759;
+}
+
+.json-keyword {
+    color: #d73a49;
+}
+
+.json-number {
+    color: #005cc5;
+}

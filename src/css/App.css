@@ -1,0 +1,53 @@
+/* src/css/App.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #8d735f;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+}
+
+.sidebar {
+  width: 300px;
+  padding-right: 20px;
+}
+
+.main {
+  flex-grow: 1;
+  margin-top: 10px;
+}
+
+input, select {
+  font-size: 18px;
+}
+
+h1 {
+  color: #8d735f;
+  text-align: center;
+  font-size: 32px;
+}
+
+.top-link {
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  text-align: left;
+  display: block;
+  border-radius: 5px;
+}
+
+.top-link h1 {
+  color: #8d735f;
+}

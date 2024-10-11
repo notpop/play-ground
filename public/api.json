@@ -1,0 +1,220 @@
+{
+  "domain": "http://localhost:3000",
+  "categories": [
+    {
+      "category": "ユーザー管理",
+      "apis": [
+        {
+          "name": "Get Users",
+          "endpoint": "/api/v1/users",
+          "method": "GET",
+          "requiresAuth": true,
+          "params": [
+            { "name": "userId", "type": "string", "required": true }
+          ]
+        },
+        {
+          "name": "Create User",
+          "endpoint": "/api/v1/users",
+          "method": "POST",
+          "requiresAuth": true,
+          "params": [
+            { "name": "username", "type": "string", "required": true },
+            { "name": "email", "type": "string", "required": false },
+            { "name": "age", "type": "integer", "required": false },
+            { "name": "isActive", "type": "boolean", "required": true }
+          ]
+        },
+        {
+          "name": "Update User",
+          "endpoint": "/api/v1/users",
+          "method": "PUT",
+          "requiresAuth": true,
+          "params": [
+            { "name": "userId", "type": "string", "required": true },
+            { "name": "email", "type": "string", "required": false },
+            { "name": "age", "type": "integer", "required": false },
+            { "name": "isActive", "type": "boolean", "required": true }
+          ]
+        },
+        {
+          "name": "Delete User",
+          "endpoint": "/api/v1/users",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "params": [
+            { "name": "userId", "type": "string", "required": true }
+          ]
+        },
+        {
+          "name": "Get User Profile",
+          "endpoint": "/api/v1/users/profile",
+          "method": "GET",
+          "requiresAuth": true,
+          "params": [
+            { "name": "userId", "type": "string", "required": true }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "プロジェクト管理",
+      "apis": [
+        {
+          "name": "Get Projects",
+          "endpoint": "/api/v1/projects",
+          "method": "GET",
+          "requiresAuth": false
+        },
+        {
+          "name": "Create Project",
+          "endpoint": "/api/v1/projects",
+          "method": "POST",
+          "requiresAuth": true,
+          "params": [
+            { "name": "projectName", "type": "string", "required": true },
+            { "name": "budget", "type": "integer", "required": true }
+          ]
+        },
+        {
+          "name": "Update Project",
+          "endpoint": "/api/v1/projects",
+          "method": "PUT",
+          "requiresAuth": true,
+          "params": [
+            { "name": "projectId", "type": "string", "required": true },
+            { "name": "projectName", "type": "string", "required": false },
+            { "name": "budget", "type": "integer", "required": false },
+            { "name": "isCompleted", "type": "boolean", "required": false }
+          ]
+        },
+        {
+          "name": "Delete Project",
+          "endpoint": "/api/v1/projects",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "params": [
+            { "name": "projectId", "type": "string", "required": true }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "タスク管理",
+      "apis": [
+        {
+          "name": "Get Tasks",
+          "endpoint": "/api/v1/tasks",
+          "method": "GET",
+          "requiresAuth": false
+        },
+        {
+          "name": "Create Task",
+          "endpoint": "/api/v1/tasks",
+          "method": "POST",
+          "requiresAuth": true,
+          "params": [
+            { "name": "taskName", "type": "string", "required": true },
+            { "name": "projectId", "type": "string", "required": true },
+            { "name": "priority", "type": "integer", "required": true },
+            { "name": "isCompleted", "type": "boolean", "required": false }
+          ]
+        },
+        {
+          "name": "Update Task",
+          "endpoint": "/api/v1/tasks",
+          "method": "PUT",
+          "requiresAuth": true,
+          "params": [
+            { "name": "taskId", "type": "string", "required": true },
+            { "name": "taskName", "type": "string", "required": false },
+            { "name": "priority", "type": "integer", "required": false },
+            { "name": "isCompleted", "type": "boolean", "required": false }
+          ]
+        },
+        {
+          "name": "Delete Task",
+          "endpoint": "/api/v1/tasks",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "params": [
+            { "name": "taskId", "type": "string", "required": true }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "認証",
+      "apis": [
+        {
+          "name": "Login",
+          "endpoint": "/api/v1/auth/login",
+          "method": "POST",
+          "requiresAuth": false,
+          "params": [
+            { "name": "username", "type": "string", "required": true },
+            { "name": "password", "type": "string", "required": true }
+          ]
+        },
+        {
+          "name": "Logout",
+          "endpoint": "/api/v1/auth/logout",
+          "method": "POST",
+          "requiresAuth": true
+        },
+        {
+          "name": "Refresh Token",
+          "endpoint": "/api/v1/auth/refresh",
+          "method": "POST",
+          "requiresAuth": true,
+          "params": [
+            { "name": "refreshToken", "type": "string", "required": true }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "レポート",
+      "apis": [
+        {
+          "name": "Get Reports",
+          "endpoint": "/api/v1/reports",
+          "method": "GET",
+          "requiresAuth": false
+        },
+        {
+          "name": "Create Report",
+          "endpoint": "/api/v1/reports",
+          "method": "POST",
+          "requiresAuth": true,
+          "params": [
+            { "name": "reportName", "type": "string", "required": true },
+            { "name": "reportType", "type": "string", "required": true },
+            { "name": "isPublic", "type": "boolean", "required": true }
+          ]
+        },
+        {
+          "name": "Update Report",
+          "endpoint": "/api/v1/reports",
+          "method": "PUT",
+          "requiresAuth": true,
+          "params": [
+            { "name": "reportId", "type": "string", "required": true },
+            { "name": "reportName", "type": "string", "required": false },
+            { "name": "reportType", "type": "string", "required": false },
+            { "name": "isPublic", "type": "boolean", "required": false }
+          ]
+        },
+        {
+          "name": "Delete Report",
+          "endpoint": "/api/v1/reports",
+          "method": "DELETE",
+          "requiresAuth": true,
+          "params": [
+            { "name": "reportId", "type": "string", "required": true }
+          ]
+        }
+      ]
+    }
+  ]
+}
