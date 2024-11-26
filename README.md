@@ -72,4 +72,3 @@ Reactの詳細については、[React documentation](https://reactjs.org/) を�
 Create React Appの詳細については、[Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started) を参照してください。
 
 このREADMEは、プロジェクトの基本的な情報、利用可能なスクリプト、設定方法、アーキテクチャの概要などを提供します。必要に応じて、プロジェクトの具体的な要件やカスタマイズに合わせて修正してください。
-# play-ground
